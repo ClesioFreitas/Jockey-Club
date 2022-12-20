@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Jockey Club</title>
+</head>
+<body>
+
+  <div>
+    <div class="grid-container">
+      <!-- Imagem -->
+      <div>
+        <img src="img/ex11_1.jpg" alt="Jockey Club" class="img-fluid">
+      </div>
+
+      <!--  -->
+      <div class="col-4">
+        <h1>Jockey Club - Controle de Apostas</h1>
+        
+          <div class="cavalo">
+            <div>
+              <label for="inCavalo">Nº Cavalo:</label>
+              <input type="number" min="1" class="form-control" id="inCavalo" 
+                     required autofocus>
+            </div>
+            <div >
+              <h5 id="outCavalo"></h5>
+            </div>
+          </div>
+
+          <div class="aposta">
+            <div>
+              <label for="inAposta">Aposta R$:</label>
+              <input type="number" class="form-control" min="1" step="0.5" 
+                     id="inValor" required>
+            </div>
+            <div>
+              <input type="submit" class="azul btn" value="Apostar" 
+                     id="btApostar">
+              <input type="button" class="amarelo btn" value="Resumo" 
+                     id="btResumo">
+              <input type="button" class="verde btn" value="Ganhador" 
+                     id="btGanhador">
+              <input type="button" class="vermelho btn" value="Novo Páreo" 
+                     id="btNovo">
+            </div>
+          </div>
+      
+        <pre id="outApostas"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
