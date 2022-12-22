@@ -23,8 +23,11 @@ function adicionarApostas(){
     lista += "N " + apostas[i].cavalo + " " + obterCavalo(apostas[i].cavalo);
     lista += " - R$: " + apostas[i].valor.toFixed(2) + "\n";
   }
+  outApostas.textContent = lista;
 
-  outApostas.textContent = lista
+  inCavalo.value = "";
+  inValor.value = "";
+  inCavalo.focus();
 }
 
 const btApostar = document.querySelector("#btApostar");
@@ -43,3 +46,22 @@ function obterCavalo(numCavalo){
   const posicao = [numCavalo - 1]
   return CAVALOS[posicao]
 }
+
+function mostrarApostas(){
+  const inCavalo = document.querySelector("#outCavalo")
+  const outCavalo = document.querySelector("#outCavalo")
+
+  const cavalo = Numebr(inCavalo.value);
+
+  if(inCavalo.value === "" || !validaApostar(cavalo)){
+    outCavalo.textContent = "Numero Cavalo Invalido";
+    return
+  }
+}
+
+
+const inCavalo = document.querySelector("#inCavalo");
+inCavalo.addEventListener("blur", mostrarApostas)
+
+inCavalo.addEventListener("focus", mostrarApostas)
+

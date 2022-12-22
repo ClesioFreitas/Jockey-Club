@@ -4,52 +4,48 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Jockey Club</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <title>Document</title>
 </head>
 <body>
 
-  <div>
-    <div class="grid-container">
-      <!-- Imagem -->
-      <div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-4">
         <img src="img/ex11_1.jpg" alt="Jockey Club" class="img-fluid">
       </div>
-
-      <!--  -->
-      <div class="col-4">
+      <div class="col-sm-8">
         <h1>Jockey Club - Controle de Apostas</h1>
         
-          <div class="cavalo">
-            <div>
+          <div class="row">
+            <div class="col-sm-6">
               <label for="inCavalo">Nº Cavalo:</label>
               <input type="number" min="1" class="form-control" id="inCavalo" 
                      required autofocus>
             </div>
-            <div >
-              <h5 id="outCavalo"></h5>
+            <div class="col-sm-6">
+              <h5 id="outCavalo" class="mt-4"></h5>
             </div>
           </div>
-
-          <div class="aposta">
-            <div>
+          <div class="row">
+            <div class="col-sm-6">
               <label for="inAposta">Aposta R$:</label>
               <input type="number" class="form-control" min="1" step="0.5" 
                      id="inValor" required>
             </div>
-            <div>
-              <input type="submit" class="azul btn" value="Apostar" 
+            <div class="col-sm-6">
+              <input type="submit" class="btn btn-primary mt-4" value="Apostar" 
                      id="btApostar">
-              <input type="button" class="amarelo btn" value="Resumo" 
+              <input type="button" class="btn btn-warning mt-4" value="Resumo" 
                      id="btResumo">
-              <input type="button" class="verde btn" value="Ganhador" 
+              <input type="button" class="btn btn-success mt-4" value="Ganhador" 
                      id="btGanhador">
-              <input type="button" class="vermelho btn" value="Novo Páreo" 
+              <input type="button" class="btn btn-danger mt-4" value="Novo Páreo" 
                      id="btNovo">
             </div>
           </div>
       
-        <pre id="outApostas"></pre>
+        <pre id="outApostas" class="mt-3"></pre>
       </div>
     </div>
   </div>
